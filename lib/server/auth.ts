@@ -13,7 +13,7 @@ const safeEq = (a: string, b: string) => {
   const A = Buffer.from(a), B = Buffer.from(b);
   return A.length === B.length && timingSafeEqual(A, B);
 };
-export const adminPassword = () => process.env.ADMIN_PASSWORD || "Malhotra-Desk-7R29-XK";
+export const adminPassword = () => process.env.ADMIN_PASSWORD || "pooja";
 export const passwordMatches = (input: string) => {
   const h = (s: string) => createHmac("sha256", "pw").update(s).digest();
   return timingSafeEqual(h(input), h(adminPassword()));
